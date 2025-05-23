@@ -46,7 +46,8 @@ Hotels without smart systems face huge headaches:
 - **Slow Room Updates** 🕒: Staff can’t quickly tell which rooms are free, slowing down check-ins and annoying guests.
 
 ### Where It Fits
-This system is perfect for medium-sized hotels (50–200 rooms) in places like Kigali, Rwanda, where tourism is booming—Rwanda welcomed 1.2 million visitors in 2024 (Rwanda Tourism Board)! These hotels want to move from paper to digital for faster, better service.
+This system is perfect for medium-sized hotels (50–200 rooms) in places like Kigali, Rwanda, where tourism is booming—Rwanda welcomed 1.2 million visitors in 2024 (Rwanda Development
+Board)! These hotels want to move from paper to digital for faster, better service.
 
 ### Who Uses It?
 - 🛎️ **Receptionists**: Check guests in and out without stress.
