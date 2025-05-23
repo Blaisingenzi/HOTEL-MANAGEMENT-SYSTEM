@@ -624,9 +624,13 @@ I tested these triggers to make sure they’re doing their jobs like superheroes
      ```sql
      SELECT * FROM audit_logs;
      ```
-     *Result*: Wow! It showed two entries: one for “INSERT” and one for “UPDATE,” both marked “Logged.” The trigger tracked everything like a pro!  
+     *Result*: Wow! It showed two entries: one for “INSERT” and one for “UPDATE,” both marked “Logged.” The trigger tracked everything like a pro!
+     
 
-    ![alt text](<PHASE  7/Inserted alreday.png>)
+![image alt](  https://github.com/Blaisingenzi/HOTEL-MANAGEMENT-SYSTEM/blob/main/PHASE%20%207/Inserted%20alreday.png?raw=true)
+
+
+ 
 
 
 
