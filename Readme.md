@@ -339,7 +339,6 @@ END;
 ### Procedure call
 
 ```sql
--- ✅ This goes in your worksheet and works
 DECLARE
     v_name VARCHAR2(100);
     v_phone VARCHAR2(20);
@@ -350,7 +349,8 @@ BEGIN
 END;
 /
 ```
-![image alt](image_url)
+![image alt](https://github.com/user-attachments/assets/5cfba4c9-a3fd-4172-83e8-5b90cc6d4556)
+
 ### 4.  Implementation with Cursor
 Created a cursor `get_guest_bookings` to list all bookings for a given guest using a cursor to fetch booking details efficiently.
 
