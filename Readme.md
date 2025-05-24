@@ -333,7 +333,8 @@ EXCEPTION
 END;
 /
 ```
-![image alt](image_url)
+![image alt](https://github.com/Blaisingenzi/HOTEL-MANAGEMENT-SYSTEM/blob/main/PHASE%206/Procedure%20.png?raw=true)
+
 
 ### Procedure call
 
