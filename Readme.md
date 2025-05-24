@@ -239,7 +239,7 @@ INSERT INTO payments VALUES (1, 1, 250000, 'Cash', SYSDATE);
 
 The system isn’t just a box—it’s alive! It lets staff add, change, and check info easily.
 
-### Changing Data
+### DML
 ```sql
 UPDATE rooms SET status = 'Booked' WHERE room_id = 101;
 
@@ -249,7 +249,8 @@ UPDATE rooms SET status = 'Booked' WHERE room_id = 101;
 
 
 
-### Changing Structure
+### DDL(Data Definition Language)
+
 ```sql
 CREATE TABLE reviews (
     review_id NUMBER PRIMARY KEY,
