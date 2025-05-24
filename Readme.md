@@ -239,7 +239,7 @@ INSERT INTO payments VALUES (1, 1, 250000, 'Cash', SYSDATE);
 
 The system isn’t just a box—it’s alive! It lets staff add, change, and check info easily.
 
-### DML
+### DML(Data Definition Language)
 ```sql
 UPDATE rooms SET status = 'Booked' WHERE room_id = 101;
 
