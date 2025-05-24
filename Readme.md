@@ -137,15 +137,18 @@ The database is organized to avoid mess:
 The database is like the hotel’s control room—it needs a name, a key, and a way to watch it work.
 
 ### Details
-- **Name**: mon_27488_blaise_hotelMS_db
-- **Password**: blaise
+- **Name**: Tue_27488_Blaise_hotelMS_db
+- **Password**: Blaise
 - **Access**: Super Admin (full control)
 - **Tool**: Oracle Enterprise Manager (OEM) to check performance
 
+![alt text](<Phase 4/PHASE IV.jpg>)
 
 **Real-World Fact**: Tools like OEM help hotels spot issues fast, reducing downtime by 30% in tech-savvy hotels (Tech in Hospitality, 2025).
 
-![alt text](<Phase 4/PHASE IV.jpg>)
+![image alt]([image_url](https://github.com/Blaisingenzi/HOTEL-MANAGEMENT-SYSTEM/blob/main/Phase%204/OEM.png?raw=true))
+
+
 ---
 
 ## 🛠️ Phase V: Building Tables & Adding Info 📦
