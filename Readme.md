@@ -691,7 +691,7 @@ I tested these triggers to make sure they’re doing their jobs like superheroes
 
 ---
 
-### What We Learned from Testing 🌈
+### What We Learned from Testing 
 - ✅ The weekday rule works—it blocks changes on busy days like Monday and Friday!
 - ✅ It lets me work on Sundays, making weekends perfect for updates.
 - ✅ The holiday rule protects special days like Heroes Day.
