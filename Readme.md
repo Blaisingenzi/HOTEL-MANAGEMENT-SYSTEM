@@ -308,8 +308,50 @@ This query groups payments by `guest_id` and shows a running total for tracking 
 
 **Screenshot**: See `payment_running_total.png` for the query execution and result (guest_id 1, payment_id 1, amount 250000, running_total 250000).
 
-### 3. Procedure Implementation with Cursor
-Created a procedure `get_guest_bookings` to list all bookings for a given guest using a cursor to fetch booking details efficiently.
+### 3. Procedure Implementation
+
+The get_guest_info procedure takes a guest ID as input and searches for the guest's full name and phone number in the guests table. If the guest is found, it prints their name and phone number. If no guest is found with that ID, it shows a message saying so. If any other error happens, it prints a general error message. This helps safely get and display guest information using the given ID.
+
+```sql
+CREATE OR REPLACE PROCEDURE get_guest_info(p_guest_id IN NUMBER) IS
+    v_name guests.full_name%TYPE;
+    v_phone guests.phone_number%TYPE;
+BEGIN
+    SELECT full_name, phone_number
+    INTO v_name, v_phone
+    FROM guests
+    WHERE guest_id = p_guest_id;
+
+    DBMS_OUTPUT.PUT_LINE('Guest Name: ' || v_name);
+    DBMS_OUTPUT.PUT_LINE('Phone Number: ' || v_phone);
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('No guest found with ID ' || p_guest_id);
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
+END;
+/
+```
+![image alt](image_url)
+
+### Procedure call
+
+```sql
+-- ✅ This goes in your worksheet and works
+DECLARE
+    v_name VARCHAR2(100);
+    v_phone VARCHAR2(20);
+BEGIN
+    get_guest_details(1, v_name, v_phone);  -- Call procedure with OUT variables
+    DBMS_OUTPUT.PUT_LINE('Name: ' || v_name);
+    DBMS_OUTPUT.PUT_LINE('Phone: ' || v_phone);
+END;
+/
+```
+![image alt](image_url)
+### 4.  Implementation with Cursor
+Created a cursor `get_guest_bookings` to list all bookings for a given guest using a cursor to fetch booking details efficiently.
 
 ```sql
 DECLARE
