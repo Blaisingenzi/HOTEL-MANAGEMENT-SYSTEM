@@ -146,7 +146,7 @@ The database is like the hotel’s control room—it needs a name, a key, and a 
 
 **Real-World Fact**: Tools like OEM help hotels spot issues fast, reducing downtime by 30% in tech-savvy hotels (Tech in Hospitality, 2025).
 
-![image alt]([image_url](https://github.com/Blaisingenzi/HOTEL-MANAGEMENT-SYSTEM/blob/main/Phase%204/OEM.png?raw=true))
+![image alt](https://github.com/Blaisingenzi/HOTEL-MANAGEMENT-SYSTEM/blob/main/Phase%204/OEM.png?raw=true)
 
 
 ---
