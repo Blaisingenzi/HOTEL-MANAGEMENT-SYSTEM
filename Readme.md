@@ -235,6 +235,61 @@ INSERT INTO payments VALUES (1, 1, 250000, 'Cash', SYSDATE);
 **Real-World Fact**: Adding realistic test data helps hotels spot issues before launch, saving 15% in operational costs (Hotel Tech Insights, 2024).
 ---
 
+## 📘 Database Normalization
+To ensure data integrity, reduce redundancy, and support a scalable design, the Hotel Room Booking and Management System database was normalized to the Third Normal Form (3NF). This process involved decomposing complex tables into simpler, well-structured relations with clear primary and foreign key constraints.
+
+### 🔹 1. First Normal Form (1NF)
+In this stage, all repeating groups and multivalued attributes were removed. Each table contains only atomic (indivisible) values.
+
+✅ Example:
+Instead of storing multiple room numbers in a single field, bookings involving multiple rooms were split across separate rows.
+
+text
+Copy
+Edit
+Bad: RoomNumbers = "101, 102"
+Good: RoomNumber = "101" (separate row), RoomNumber = "102" (separate row)
+### 🔹 2. Second Normal Form (2NF)
+The database was further refined by removing partial dependencies. Attributes that depended on part of a composite primary key were moved to separate tables.
+
+✅ Example:
+Customer details, which do not depend on the Booking–Room relationship, were moved to a separate Customers table and linked via CustomerID.
+
+### 🔹 3. Third Normal Form (3NF)
+Finally, transitive dependencies were eliminated. Non-key attributes were ensured to depend only on the primary key and not on other non-key attributes.
+
+✅ Example:
+The customer’s email and name, which depend on CustomerID—not BookingID—were placed in the Customers table. The Bookings table only stores IDs that connect to relevant information.
+
+#### 🧩 Example of Normalized Tables:
+Customers
+CustomerID (PK), FullName, Email, Phone
+
+Rooms
+RoomID (PK), RoomType, PricePerNight, Status
+
+Bookings
+BookingID (PK), CustomerID (FK), BookingDate, CheckInDate, CheckOutDate
+
+BookingDetails
+BookingID (FK), RoomID (FK)
+
+Payments
+PaymentID (PK), BookingID (FK), PaymentMethod, AmountPaid, PaymentStatus
+
+#### 🎯 Result:
+The final database design ensures:
+
+Clean relationships using Primary Keys (PK) and Foreign Keys (FK)
+
+Minimized data duplication
+
+Easier updates and improved query performance
+
+A solid foundation for the PL/SQL implementation phase
+
+
+
 ## ⚙️ Phase VI: Using the Database 🚀
 
 The system isn’t just a box—it’s alive! It lets staff add, change, and check info easily.
